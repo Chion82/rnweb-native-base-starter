@@ -41,6 +41,7 @@ module.exports = {
     alias: {
       'react-native': 'react-native-web-extended',
       'native-base': 'native-base-web',
+      //Icon.TabBarItem
       'react-native-vector-icons/Ionicons': 'native-base-web/dist/Components/Widgets/Icon'
     }
   }

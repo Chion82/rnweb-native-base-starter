@@ -6,7 +6,7 @@ import { Touchable } from '../components/Touchable';
 
 storiesOf('Touchable', module)
   .add('with Text', () => (
-    <Touchable onPress={action("Can't touch this?")}>
+    <Touchable onPress={action(`Can't touch this?`)}>
       <Text style={{color: '#FFF',}}>SUBMIT</Text>
     </Touchable>
   ))

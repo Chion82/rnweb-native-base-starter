@@ -3,19 +3,23 @@ import NewTodo from '../containers/NewTodo';
 
 class NewTodoScreen extends Component {
 
-	static childContextTypes = {
-		navigator : React.PropTypes.any
-	}
+  static propTypes = {
+    navigator : React.PropTypes.any
+  }
 
-	getChildContext() {
-		return {
-			navigator : this.props.navigator
-		}
-	}
+  static childContextTypes = {
+    navigator : React.PropTypes.any
+  }
 
-	render() {
-		return (<NewTodo {...this.props} />);
-	}
+  getChildContext() {
+    return {
+      navigator : this.props.navigator
+    };
+  }
+
+  render() {
+    return (<NewTodo {...this.props} />);
+  }
 }
 
 export default NewTodoScreen;

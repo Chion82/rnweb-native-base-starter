@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   StyleSheet,
   TouchableHighlight,
@@ -13,7 +13,12 @@ export const Touchable = props => (
       {props.children}
     </View>
   </TouchableHighlight>
-)
+);
+
+Touchable.propTypes = {
+  styles : React.PropTypes.any,
+  children : React.PropTypes.any
+};
 
 const styles = StyleSheet.create({
   wrapper: {

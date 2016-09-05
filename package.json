@@ -1,14 +1,15 @@
 {
-  "name": "rn-web",
-  "version": "1.1.0",
-  "description": "",
+  "name": "rnweb-native-base-starter",
+  "version": "0.0.1",
+  "description": "react-native-web + native-base-web + redux + redux-saga starter kit.",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --port 3000 --config web/webpack.config.dev.js --inline --hot --colors --quiet",
     "storybook": "start-storybook -p 9001 -c web/.storybook",
     "test": "mocha --compilers js:babel-register --require babel-polyfill --recursive app/**/__tests__/*.js",
     "test:watch": "npm test -- --watch",
-    "build": "webpack --config web/webpack.config.prod.js && cp web/src/* dist/"
+    "build": "rm -rf dist && webpack --config web/webpack.config.prod.js && cp -r web/src/* dist/",
+    "lint": "eslint app/**/*.js"
   },
   "keywords": [
     "react",
@@ -30,6 +31,7 @@
   "devDependencies": {
     "@kadira/storybook": "1.28.1",
     "babel-core": "6.9.1",
+    "babel-eslint": "^6.1.2",
     "babel-loader": "6.2.4",
     "babel-plugin-transform-decorators-legacy": "1.3.4",
     "babel-polyfill": "^6.13.0",
@@ -38,6 +40,8 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.14.0",
     "babel-runtime": "6.9.2",
+    "eslint": "^3.4.0",
+    "eslint-plugin-react": "^6.2.0",
     "expect": "^1.20.2",
     "file-loader": "^0.9.0",
     "mocha": "^3.0.2",
