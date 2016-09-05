@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import {
-	Icon
-} from 'native-base';
-import {
 	TabBarIOS,
 	Text,
-	View
+	View,
+	Platform
 } from 'react-native';
 import yayoiTheme from '../themes/yayoi';
 import HomeTab from '../containers/HomeTab';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 class MainScreen extends Component {
 

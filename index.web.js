@@ -4,14 +4,12 @@
  * Follow me https://twitter.com/grabthecode
  */
 
-import { AppRegistry, Platform } from 'react-native';
+import { AppRegistry } from 'react-native';
 import Entry from './app/entry/index';
 import { OSTheme } from 'native-base';
 
 //Use IOS theme for our web app
-if (Platform.OS === 'web') {
-  OSTheme.setOSTheme('ios');
-}
+OSTheme.setOSTheme('ios');
 
 AppRegistry.registerComponent('App', () => Entry);
 AppRegistry.runApplication('App', {

@@ -1,11 +1,9 @@
-// Use require.context to require reducers automatically
-// Ref: https://webpack.github.io/docs/context.html
-const context = require.context('./', false, /\.js$/);
-const keys = context.keys().filter(item => item !== './index.js');
+//Import all reducers
+import todos from './todos';
 
-const reducers = keys.reduce((memo, key) => {
-  memo[key.match(/([^\/]+)\.js$/)[1]] = context(key).default;
-  return memo;
-}, {});
+const reducers = {
+  todos,
+  //Place other reducers here
+};
 
 export default reducers;

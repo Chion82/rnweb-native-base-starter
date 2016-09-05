@@ -2,7 +2,7 @@ import { takeLatest } from 'redux-saga';
 import { call, put, fork, cancel } from 'redux-saga/effects';
 import apiCall from '../services/apiCall';
 
-function* getTodos() {
+export function* getTodos() {
 	try {
 		const response = yield call(apiCall, 'todos', 'GET');
 		yield put({
@@ -18,7 +18,7 @@ function* getTodos() {
 	}
 }
 
-function* addTodo(action) {
+export function* addTodo(action) {
 	try {
 		const response = yield call(apiCall, 'todos', 'POST', {
 			todo : action.todo
@@ -38,7 +38,7 @@ function* addTodo(action) {
 	}
 }
 
-function* deleteTodo(action) {
+export function* deleteTodo(action) {
 	try {
 		const response = yield call(apiCall, `todos/${action.todo.id}`, 'DELETE');
 		yield put({
