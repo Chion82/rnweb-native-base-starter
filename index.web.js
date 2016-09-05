@@ -1,7 +1,7 @@
 /**
- * React Native for Web Starter App
- * https://github.com/grabcode/react-native-web-starter
- * Follow me https://twitter.com/grabthecode
+ * react-native-web + native-base-web starter app
+ * Chion82 https://github.com/Chion82/rnweb-native-base-starter
+ * https://miria.moe
  */
 
 import { AppRegistry } from 'react-native';
@@ -14,4 +14,4 @@ OSTheme.setOSTheme('ios');
 AppRegistry.registerComponent('App', () => Entry);
 AppRegistry.runApplication('App', {
   rootTag: document.getElementById('react-root')
-})
+});
