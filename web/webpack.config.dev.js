@@ -4,10 +4,12 @@ const webpack = require('webpack')
 const DIRECTORY = path.join(__dirname)
 
 module.exports = {
+  //devtool : 'source-map',
   devServer: {
     contentBase: path.join(__dirname, 'src')
   },
   entry: [
+    'babel-polyfill',
     path.join(__dirname, '../index.web.js')
   ],
   module: {
