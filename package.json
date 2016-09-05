@@ -8,7 +8,7 @@
     "storybook": "start-storybook -p 9001 -c web/.storybook",
     "test": "mocha --compilers js:babel-register --require babel-polyfill --recursive app/**/__tests__/*.js",
     "test:watch": "npm test -- --watch",
-    "build": "rm -rf dist && webpack --config web/webpack.config.prod.js && cp -r web/src/* dist/",
+    "build": "rm -rf dist && webpack --config web/webpack.config.prod.js --progress && cp -r web/src/* dist/",
     "lint": "eslint app/**/*.js"
   },
   "keywords": [
