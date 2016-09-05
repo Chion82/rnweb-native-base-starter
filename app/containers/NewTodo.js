@@ -43,9 +43,6 @@ class NewTodo extends Component {
 						<Icon name='ios-arrow-back' />
 					</Button>
 					<Title>New Todo</Title>
-					<Button transparent>
-						<Text style={{color:'white'}}>Add</Text>
-					</Button>
 				</Header>
 
 				<Content>

@@ -32,6 +32,14 @@ class HomeTab extends Component {
 		});
 	}
 
+	handleDeleteTodo(todo) {
+		const { dispatch } = this.props;
+		dispatch({
+			type : 'todos/delete',
+			todo
+		});
+	}
+
 	render() {
 		return (
 			<Container theme={yayoiTheme}>
@@ -45,7 +53,7 @@ class HomeTab extends Component {
 					</Button>
 				</Header>
 				<Content>
-					<TodoList todos={this.props.todos.list} />
+					<TodoList todos={this.props.todos.list} handleDeleteTodo={this.handleDeleteTodo.bind(this)} />
 				</Content>
 			</Container>
 		)

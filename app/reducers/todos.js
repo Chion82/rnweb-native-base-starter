@@ -11,7 +11,7 @@ const todos = handleActions({
 	['todos/get/failed'](state, action) {
 		return {...state, isLoading: false, err: action.err};
 	},
-	
+
 	//todos/add
 	['todos/add'](state, action) {
 		return {...state, isLoading: true, list: [...state.list, action.todo]};
@@ -21,7 +21,18 @@ const todos = handleActions({
 	},
 	['todos/add/failed'](state, action) {
 		return {...state, isLoading: false, err: action.err};
-	}
+	},
+
+	//todos/delete
+	['todos/delete'](state, action) {
+		return {...state, isLoading: true, list: state.list.filter((todo) => todo.id !== action.todo.id)};
+	},
+	['todos/delete/success'](state) {
+		return {...state, isLoading: false};
+	},
+	['todos/delete/failed'](state, action) {
+		return {...state, isLoading: false, err: action.err};
+	},
 }, {
 	list : [],
 	isLoading : false

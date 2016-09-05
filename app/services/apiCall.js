@@ -1,7 +1,15 @@
 const API_HOST = 'http://localhost:5000/api';
 
+function getRequestArgs(obj) {
+	let paramArray = []
+	for (let key in obj) {
+	    paramArray.push(key + "=" + encodeURIComponent(obj[key]));
+	}
+	return paramArray.join('&');
+}
+
 export default function (uri, method, data) {
-	const url = API_HOST + '/' + uri;
+	let url = API_HOST + '/' + uri;
 	method = method.toUpperCase();
 
 	const	fetchOptions = {
@@ -11,6 +19,10 @@ export default function (uri, method, data) {
 			'Content-Type': 'application/json'
 		}
 	};
+
+	if (method === 'GET' && data) {
+		url += '?' + getRequestArgs(data);
+	}
 
 	return new Promise((resolve, reject)=>{
 		fetch(url, fetchOptions).then((response) => {
