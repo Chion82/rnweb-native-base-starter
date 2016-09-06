@@ -7,7 +7,7 @@ import {
   Content,
   Button
 } from 'native-base';
-import { Text } from 'react-native';
+import { Text, RefreshControl } from 'react-native';
 import { connect } from 'react-redux';
 import yayoiTheme from '../themes/yayoi';
 import TodoList from '../components/TodoList';
@@ -57,7 +57,11 @@ class HomeTab extends Component {
             <Icon name="md-add" />
           </Button>
         </Header>
-        <Content>
+        <Content refreshControl={
+          <RefreshControl
+            refreshing={this.props.todos.isLoading}
+            onRefresh={() => this.props.dispatch({type : 'todos/get'})}
+          />}>
           <TodoList todos={this.props.todos.list} handleDeleteTodo={this.handleDeleteTodo.bind(this)} />
         </Content>
       </Container>

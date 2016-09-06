@@ -4,7 +4,7 @@
   "description": "react-native-web + native-base-web + redux + redux-saga starter kit.",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --port 3000 --config web/webpack.config.dev.js --inline --hot --colors --quiet",
+    "dev": "webpack-dev-server --host 0.0.0.0 --port 3000 --config web/webpack.config.dev.js --inline --hot --colors --quiet",
     "storybook": "start-storybook -p 9001 -c web/.storybook",
     "test": "mocha --compilers js:babel-register --require babel-polyfill --recursive app/**/__tests__/*.js",
     "test:watch": "npm test -- --watch",
@@ -20,13 +20,14 @@
   "author": "Chion82",
   "license": "ISC",
   "dependencies": {
-    "native-base-web": "0.0.3-beta.0",
+    "native-base-web": "0.0.3-beta.1",
     "react": "^15.1.0",
-    "react-native-web-extended": "0.0.4",
+    "react-native-web-extended": "0.0.5",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
     "redux-actions": "^0.12.0",
-    "redux-saga": "^0.11.1"
+    "redux-saga": "^0.11.1",
+    "whatwg-fetch": "^1.0.0"
   },
   "devDependencies": {
     "@kadira/storybook": "1.28.1",
