@@ -1,15 +1,11 @@
 import expect from 'expect';
 import reducer from '../todos';
 
-const mockGetTodosResponse = {
-  "todos": [
-    {
-      "id": 3,
-      "isCompleted": false,
-      "title": "Learn CSS"
-    }
-  ]
-};
+const mockGetTodosResponse = [{
+  "id": 3,
+  "isCompleted": false,
+  "title": "Learn CSS"
+}];
 
 describe('todos reducer', () => {
 	it('todos/get', () => {
