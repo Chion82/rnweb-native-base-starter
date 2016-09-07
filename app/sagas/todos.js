@@ -10,7 +10,7 @@ export function* getTodos() {
       response
     });
   } catch (err) {
-    //console.error(err);
+    console.error(err);
     yield put({
       type : 'todos/get/failed',
       err
@@ -30,7 +30,7 @@ export function* addTodo(action) {
       type : 'todos/get'
     });
   } catch (err) {
-    //console.error(err);
+    console.error(err);
     yield put({
       type : 'todos/add/failed',
       err

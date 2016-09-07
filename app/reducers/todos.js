@@ -6,7 +6,7 @@ const todos = handleActions({
     return {...state, isLoading: true};
   },
   ['todos/get/success'](state, action) {
-    return {...state, isLoading: false, list: action.response.todos};
+    return {...state, isLoading: false, list: action.response};
   },
   ['todos/get/failed'](state, action) {
     return {...state, isLoading: false, err: action.err};

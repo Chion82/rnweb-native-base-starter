@@ -4,12 +4,13 @@
   "description": "react-native-web + native-base-web + redux + redux-saga starter kit.",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --host 0.0.0.0 --port 3000 --config web/webpack.config.dev.js --inline --hot --colors --quiet",
+    "dev": "node web/showip.js && webpack-dev-server --host 0.0.0.0 --port 3000 --config web/webpack.config.dev.js --inline --hot --colors --quiet &>/dev/null",
     "storybook": "start-storybook -p 9001 -c web/.storybook",
     "test": "mocha --compilers js:babel-register --require babel-polyfill --recursive app/**/__tests__/*.js",
     "test:watch": "npm test -- --watch",
     "build": "rm -rf dist && webpack --config web/webpack.config.prod.js --progress && cp -r web/src/* dist/",
-    "lint": "eslint app/**/*.js"
+    "lint": "eslint app/**/*.js",
+    "backend": "node node_modules/node-todo-server/app.js"
   },
   "keywords": [
     "react",
@@ -20,9 +21,10 @@
   "author": "Chion82",
   "license": "ISC",
   "dependencies": {
+    "color": "^0.11.3",
     "native-base-web": "0.0.3-beta.1",
     "react": "^15.1.0",
-    "react-native-web-extended": "0.0.5",
+    "react-native-web-extended": "0.0.5-beta.0",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
     "redux-actions": "^0.12.0",
@@ -46,6 +48,9 @@
     "expect": "^1.20.2",
     "file-loader": "^0.9.0",
     "mocha": "^3.0.2",
+    "my-ip": "^1.1.1",
+    "node-todo-server": "0.0.1",
+    "qrcode-terminal": "^0.10.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.1"

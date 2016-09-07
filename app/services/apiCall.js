@@ -1,4 +1,4 @@
-const API_HOST = 'http://localhost:5000/api';
+const API_HOST = process.env.API_HOST || 'http://localhost:3001/api';
 
 function getRequestArgs(obj) {
   let paramArray = [];
