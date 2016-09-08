@@ -47,7 +47,7 @@ class HomeTab extends Component {
 
   render() {
     return (
-      <Container theme={yayoiTheme}>
+      <Container theme={yayoiTheme} style={{backgroundColor:'#FFFFFF'}}>
         <Header>
           <Button transparent>
             <Text></Text>
