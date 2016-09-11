@@ -22,9 +22,9 @@
   "license": "ISC",
   "dependencies": {
     "color": "^0.11.3",
-    "native-base-web": "0.0.3-beta.2",
+    "native-base-web": "0.0.3-beta.3",
     "react": "^15.1.0",
-    "react-native-web-extended": "0.0.5-beta.1",
+    "react-native-web-extended": "0.0.5-beta.2",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
     "redux-actions": "^0.12.0",
