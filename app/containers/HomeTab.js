@@ -47,7 +47,7 @@ class HomeTab extends Component {
 
   render() {
     return (
-      <Container theme={yayoiTheme} style={{backgroundColor:'#FFFFFF'}}>
+      <Container theme={yayoiTheme}>
         <Header>
           <Button transparent>
             <Text></Text>
@@ -61,7 +61,8 @@ class HomeTab extends Component {
           <RefreshControl
             refreshing={this.props.todos.isLoading}
             onRefresh={() => this.props.dispatch({type : 'todos/get'})}
-          />}>
+          />}
+          style={{backgroundColor:'#FFFFFF'}} >
           <TodoList todos={this.props.todos.list} handleDeleteTodo={this.handleDeleteTodo.bind(this)} />
         </Content>
       </Container>

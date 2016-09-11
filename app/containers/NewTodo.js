@@ -36,7 +36,7 @@ class NewTodo extends Component {
 
   render() {
     return (
-      <Container theme={yayoiTheme} style={{backgroundColor:'#FFFFFF'}}>
+      <Container theme={yayoiTheme}>
 
         <Header>
           <Button transparent onPress={this.handleBackBtnPress.bind(this)}>
@@ -45,7 +45,7 @@ class NewTodo extends Component {
           <Title>New Todo</Title>
         </Header>
 
-        <Content>
+        <Content style={{backgroundColor:'#FFFFFF'}}>
           <TodoForm handleNewTodo={this.handleNewTodo.bind(this)} />
         </Content>
 
