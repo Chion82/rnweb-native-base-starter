@@ -10,6 +10,7 @@ export function* getTodos() {
       response
     });
   } catch (err) {
+    // eslint-disable-next-line
     console.error(err);
     yield put({
       type : 'todos/get/failed',
@@ -30,6 +31,7 @@ export function* addTodo(action) {
       type : 'todos/get'
     });
   } catch (err) {
+    // eslint-disable-next-line
     console.error(err);
     yield put({
       type : 'todos/add/failed',

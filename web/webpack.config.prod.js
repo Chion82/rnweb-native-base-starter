@@ -1,3 +1,4 @@
+/* eslint-disable */
 const path = require('path')
 const webpack = require('webpack')
 
@@ -45,7 +46,8 @@ module.exports = {
       'react-native': 'react-native-web-extended',
       'native-base': 'native-base-web',
       //Icon.TabBarItem
-      'react-native-vector-icons/Ionicons': 'native-base-web/dist/Components/Widgets/Icon'
+      'react-native-vector-icons/Ionicons': 'native-base-web/lib/Components/Widgets/Icon',
+      'react/lib/ReactNativePropRegistry': 'react-native-web-extended/dist/modules/ReactNativePropRegistry'
     }
   }
 }
